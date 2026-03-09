@@ -30,21 +30,29 @@ do {
                     System.out.println("añadiendo producto al final...");
                     break;
                 case '2':
-                    listaproducto.pollFirst();
-                    System.out.println("eliminando el primer elemento...");
+                    if (listaproducto.isEmpty()){
+                        System.out.println("Error la lista esta vacia no se puede eliminar nada");
+                    }else {
+                        listaproducto.pollFirst();
+                        System.out.println("eliminando el primer elemento...");
+                    }
                     break;
                 case '3':
                     String producto_ = sc.nextLine();
                     if (!listaproducto.contains(producto_)) {
-                        System.out.println("el producto no se encuntra en la lista");
+                        System.out.println("el producto no se encuentra en la lista");
 
                     } else {
                         listaproducto.remove(producto_);
                     }
                     break;
                 case '4':
-                    System.out.println("el primer producto es " + listaproducto.peekFirst());
-
+                    if (!listaproducto.isEmpty()) {
+                        System.out.println("el primer producto es " + listaproducto.peekFirst());
+                    }else {
+                        System.out.println("Error la lista esta vacia");
+                    }
+                    break;
                 case '5':
                     String producto_busqueda = sc.nextLine();
                     if (listaproducto.contains(producto_busqueda)) {
