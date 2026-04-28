@@ -14,7 +14,7 @@ public class Ficheros {
             System.out.println("lugar");
             String lugar = sc.nextLine();
         for (int i =0; i<numero; i++){
-            File archivo = new File(lugar +"/nombre"+i+".txt"); 
+            File archivo = new File(lugar +"/nombre"+i+".txt");
             try {
                 if (archivo.createNewFile()){
                     System.out.println("perfecto archivo"+archivo.getName());
@@ -61,7 +61,19 @@ public class Ficheros {
             System.out.println("la carpeta no se ha creado");
         }
 
+//        carpeta.list();
 
+        String nombres_ficheros [] = carpeta.list();
+
+        for (String nombre : nombres_ficheros){
+            System.out.println(nombre);
+        }
+
+        File ficheros [] = carpeta.listFiles();
+
+        for (File ficheritos : ficheros){
+            System.out.println(ficheritos.getName()+"con tamaño"+ficheritos);
+        }
 
 
     }
