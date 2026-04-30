@@ -1,1 +1,4 @@
-hola como estas
+Patricia;25;profe
+Ismael;20;alumno
+Ivan;26;futbolista
+Manuela;20;gruista
