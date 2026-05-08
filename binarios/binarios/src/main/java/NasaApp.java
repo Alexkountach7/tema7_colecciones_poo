@@ -9,14 +9,14 @@ public class NasaApp {
         try {
 
             // ESCRIBIR OBJETO
-            ObjectOutputStream nave = new ObjectOutputStream(new FileOutputStream("artemis.ser"));
+            ObjectOutputStream nave = new ObjectOutputStream(new FileOutputStream("artemis_nulo.ser"));
 
             nave.writeObject(artemis);
 
             nave.close();
 
             // LEER OBJETO
-            ObjectInputStream deserealizado = new ObjectInputStream(new FileInputStream("artemis.ser"));
+            ObjectInputStream deserealizado = new ObjectInputStream(new FileInputStream("artemis_nulo.ser"));
 
             Nave nave_sorpresa = (Nave) deserealizado.readObject();
 

@@ -1,0 +1,10 @@
+{
+  "nombre": "España",
+  "continente": "europa",
+  "habitantes": 55454,
+  "idiomas": [
+    "vasco",
+    "catalan",
+    "castellano"
+  ]
+}

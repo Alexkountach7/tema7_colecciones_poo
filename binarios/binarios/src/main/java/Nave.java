@@ -2,7 +2,7 @@ import java.io.Serializable;
 
 public class Nave implements Serializable {
     private String nomnbre;
-    private double peso;
+    private transient double peso;
     private double velocidad;
 
     public Nave (String nombre, double peso, double velocidad) {
